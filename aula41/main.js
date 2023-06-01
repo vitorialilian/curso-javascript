@@ -32,3 +32,8 @@ const max2 = (x, y) => {
 }
 
 console.log(max2(5, 8));
+
+// Modo 5
+const max3 = (x, y) => x > y ? x : y;
+
+console.log(max3(2, 9));

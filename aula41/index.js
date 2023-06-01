@@ -1,6 +1,6 @@
 // Essa função recebe 2 números e retorne o maior deles
 
-let a = 3;
+let a = 105;
 let b = 1;
 
 function max(a, b) {
@@ -15,8 +15,8 @@ const resultado = c;
 
 // Essa função recebe dois números e retorna o maior deles
 
-let d = 3;
-let e = 4;
+let d = 15;
+let e = 25;
 
 function min(d, e) {
     if (d < e) return d;
