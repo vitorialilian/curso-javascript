@@ -47,6 +47,7 @@ try {
     const data = new Date('01-01-1970 12:58:12');
     const hora = retornaHora();
     console.log(hora);
+    console.log(data);
 } catch(e) {
     // Tratar erro
 } finally {
