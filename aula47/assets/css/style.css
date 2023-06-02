@@ -30,6 +30,18 @@ body {
     border-radius: 10px;
 }
 
+.relogio {
+    font-size: 3em;
+}
+
+.iniciado {
+    color: blue;
+}
+
+.pausado {
+    color: red;
+}
+
 form input, form label, form button {
     display: block;
     width: 100%;
