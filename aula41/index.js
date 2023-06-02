@@ -1,6 +1,6 @@
 // Essa função recebe 2 números e retorne o maior deles
 
-let a = 105;
+let a = 15;
 let b = 1;
 
 function max(a, b) {
