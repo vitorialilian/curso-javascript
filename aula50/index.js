@@ -38,7 +38,49 @@
 // funcao(obj);
 
 // Usando desestruturação de array 
-function funcao([valor1, valor2, valor3]) {
-    console.log(valor1, valor2, valor3);
-}
-funcao(['Luiz Otávio', 'Miranda', 30]);
+// function funcao([valor1, valor2, valor3]) {
+//     console.log(valor1, valor2, valor3);
+// }
+// funcao(['Luiz Otávio', 'Miranda', 30]);
+
+
+// function conta(operador, acumulador, ...numeros) {
+//     for(let numero of numeros) {
+//         if (operador === '+') acumulador += numero;
+//         if (operador === '-') acumulador -= numero; 
+//         if (operador === '/') acumulador /= numero; 
+//         if (operador === '*') acumulador *= numero;     
+//     }
+    
+//     console.log(acumulador);
+// }
+// conta('+', 1, 20, 30, 40, 50);
+
+// function expression
+// const conta = function(operador, acumulador, ...numeros) {
+//     for(let numero of numeros) {
+//         if (operador === '+') acumulador += numero;
+//         if (operador === '-') acumulador -= numero; 
+//         if (operador === '/') acumulador /= numero; 
+//         if (operador === '*') acumulador *= numero;     
+//     }
+    
+//     console.log(acumulador);
+// }; // dessa forma precisa do ; , pois colocou o sinal de =
+// conta('+', 1, 20, 30, 40, 50);
+
+// const conta = function(operador, acumulador, ...numeros) {
+//     console.log(arguments);
+// };
+// conta('+', 1, 20, 30, 40, 50);
+
+const conta = (operador, acumulador, ...numeros) => {
+    console.log(operador, acumulador, numeros);
+};
+conta('+', 1, 20, 30, 40, 50);
+
+// pode usar o arguments com o rest operator
+const conta = (...arguments) => {
+    console.log(arguments);
+};
+conta('+', 1, 20, 30, 40, 50);
