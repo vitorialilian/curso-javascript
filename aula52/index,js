@@ -1,0 +1,31 @@
+// const nome = 'Luiz';
+
+// function falaNome() {
+//     console.log(nome);
+// }
+// falaNome();
+
+// const nome = 'Luiz';
+// function falaNome() {
+//     const nome = 'Otávio';
+//     console.log(nome);
+// }
+
+// function usaFalaNome() {
+//     falaNome();
+// }
+
+// usaFalaNome();
+
+const nome = 'Luiz';
+
+function falaNome() {
+    console.log(nome);
+}
+
+function usaFalaNome() {
+    const nome = 'Otávio';
+    falaNome();
+}
+
+usaFalaNome();
