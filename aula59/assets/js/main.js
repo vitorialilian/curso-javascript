@@ -1,17 +1,23 @@
 function Calculadora() {
     this.display = document.querySelector('.display');
-
+    
     this.inicia = () => {
         this.cliqueBotoes();
-        //this.capturaEnter();
+        this.capturaEnter();
     };
-
-    // this.capturaEnter = () => {
-    //     this.display.addEventListener('keypress', e => {
-    //         if (e.key !== 13) return;
-    //         this.realizaConta();
-    //     });
-    // };
+    
+    this.buttonsforDisplay = (el) => {
+        this.display.value += el.innerText;
+        this.display.focus();
+    };
+    
+    this.capturaEnter = () => {
+        this.display.addEventListener('keyup', e => {
+            if (e.key !== 13) {
+                this.realizaConta();
+            }
+        });
+    };
 
     this.realizaConta = () => {
         try {
@@ -21,7 +27,7 @@ function Calculadora() {
                 alert('Conta Inválida');
                 return;
             }
-
+            
             this.display.value = (conta);
 
         } catch (e) {
@@ -39,16 +45,14 @@ function Calculadora() {
             const el = event.target;
 
             if (el.classList.contains('button-number')) this.buttonsforDisplay(el);
-            
+
             if (el.classList.contains('button-clear')) this.clearDisplay();
-        
+
             if (el.classList.contains('button-delete')) this.deleteOne();
 
             if (el.classList.contains('button-equal')) this.realizaConta(el);
         });
-    },
-
-        this.buttonsforDisplay = (el) => this.display.value += el.innerText;
+    };
 };
 
 const calculadora = new Calculadora();
