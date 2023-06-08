@@ -3,29 +3,27 @@ function Calculadora() {
 
     this.inicia = () => {
         this.cliqueBotoes();
-        this.pressionaEnter();
+        //this.capturaEnter();
     };
 
-    this.pressionaEnter = function () {
-        this.display.addEventListener('keyup', e => {
-            if (e.keyCode === 13) {
-                this.realizaConta();
-            }
-        });
-    };
+    // this.capturaEnter = () => {
+    //     this.display.addEventListener('keypress', e => {
+    //         if (e.key !== 13) return;
+    //         this.realizaConta();
+    //     });
+    // };
 
-    this.realizaConta = function () {
-        let conta = this.display.value;
-
+    this.realizaConta = () => {
         try {
-            conta = eval(conta);
+            const conta = eval(this.display.value);
 
             if (!conta) {
                 alert('Conta Inválida');
                 return;
             }
 
-            this.display.value = String(conta);
+            this.display.value = (conta);
+
         } catch (e) {
             alert('Conta Inválida');
             return;
@@ -34,10 +32,7 @@ function Calculadora() {
 
     this.clearDisplay = () => this.display.value = '';
 
-    this.deleteOne = function () {
-        this.display.value = this.display.value.slice(0, -1);
-    };
-
+    this.deleteOne = () => this.display.value = this.display.value.slice(0, -1);
 
     this.cliqueBotoes = () => {
         document.addEventListener('click', event => {
@@ -47,14 +42,13 @@ function Calculadora() {
             
             if (el.classList.contains('button-clear')) this.clearDisplay();
         
-            if (el.classList.contains('button-delete')) this.deleteOne(el);
+            if (el.classList.contains('button-delete')) this.deleteOne();
 
             if (el.classList.contains('button-equal')) this.realizaConta(el);
         });
     },
 
         this.buttonsforDisplay = (el) => this.display.value += el.innerText;
-};
 };
 
 const calculadora = new Calculadora();
