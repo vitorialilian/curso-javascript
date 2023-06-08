@@ -23,11 +23,16 @@ body {
 }
 
 .container {
-    max-width: 640px;
+    max-width: 440px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: pink;
     padding: 20px;
     border-radius: 10px;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
 }
 
 form input, form label, form button {
@@ -73,10 +78,24 @@ form button:active {
     font-size: 2em;
     width: 100%;
     text-align: right;
+    border: 2px solid rgb(190, 124, 231);
 }
 
 .button {
     width: 100%;
     height: 50px;
-    background-color: lightpink;
+    font-size: 1em;
+    border: none;
+    background-color: rgb(190, 124, 231);
+    cursor: pointer;
+    color: white;
+}
+
+.button:hover {
+    background-color: rgb(153, 61, 210);
+    font-weight: bolder;
+}
+
+.button-equal {
+    background-color: rgb(159, 107, 231);
 }
