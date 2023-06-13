@@ -20,7 +20,28 @@ const pessoas = [
     { nome: 'Wallace', idade: 47},
 ];
 
-const nomesString = pessoas.map(function(obj) {
-    obj.nome.toString(pessoas.nome);
+// Retorne apenas uma string com o nome da pessoa
+// const nomes = pessoas.map(obj => obj.nome);
+// console.log(nomes);
+
+// Remova apenas a chave "nome" do objeto
+// modo 1
+// const idades = pessoas.map(obj => {
+//     delete obj.nome;
+//     return obj;
+// });
+
+// modo 2
+// const idades = pessoas.map(obj => ({ idade: obj.idade })); // neste caso os parenteses foram necessarios para evitar bugar o vs code, onde as chaves do novo objeto se tornariam as chaves da função sem os parenteses
+// console.log(idades);
+
+// Adicione uma chave id em cada objeto
+
+const comIds = pessoas.map(function (obj, indice) {
+    const newObj = { ...obj }
+    newObj.id = (indice + 1) * 1000;
+    return newObj; 
 });
-console.log(nomesString);
+
+console.log(pessoas);
+console.log(comIds);
