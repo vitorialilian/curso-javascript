@@ -15,9 +15,23 @@
 // console.log(pessoa['nome']);
 // console.log(pessoa[chave]);
 
+// const pessoa1 = new Object();
+// pessoa1.nome = 'Luiz';
+// pessoa1.sobrenome = 'Otávio';
+
+// console.log(pessoa1.nome);
+// console.log(pessoa1.sobrenome);
+
+// const pessoa2 = {
+//     nome: 'Luiz',
+//     sobrenome: 'Otávio'
+// };
+
+// console.log(pessoa1, pessoa2);
+
 const pessoa1 = new Object();
 pessoa1.nome = 'Luiz';
 pessoa1.sobrenome = 'Otávio';
 
-console.log(pessoa1.nome);
-console.log(pessoa1.sobrenome);
+delete pessoa1.nome;
+console.log(pessoa1);
