@@ -42,7 +42,7 @@ ValidarCPF.prototype.criaDigito = function(cpfParcial) {
     const cpfArray = Array.from(cpfParcial);
 
     let regressivo = cpfArray.length + 1;
-    const total = cpfArray.reduce((acumulador, valor) => {
+    let total = cpfArray.reduce((acumulador, valor) => {
         acumulador += (regressivo * Number(valor));
         regressivo--;
         return acumulador;
@@ -59,7 +59,7 @@ ValidarCPF.prototype.isSequencia = function() {
 const cpf = new ValidarCPF('069.374.833-84');
 
 if(cpf.valida()) {
-    console.log('Cpf Válido');
+    console.log('CPF Válido');
 } else {
-    console.log('Cpf Inválido');
+    console.log('CPF Inválido');
 }
