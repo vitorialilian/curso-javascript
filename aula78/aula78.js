@@ -7,10 +7,9 @@ function Conta(agencia, conta, saldo) {
     this.saldo = saldo;
 }
 
-Conta.prototype.sacar = function (valor) {
-    if (valor > (this.saldo + this.limite)) {
+Conta.prototype.sacar = function(valor) {
+    if (valor > this.saldo) {
         console.log(`Saldo insuficiente: ${this.saldo}`);
-        this.verSaldo();
         return;
     }
 
