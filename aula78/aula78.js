@@ -53,6 +53,13 @@ function ContaPoupanca(agencia, conta, saldo) {
 ContaPoupanca.prototype = Object.create(Conta.prototype);
 ContaPoupanca.prototype.constructor = ContaPoupanca;
 
+const conta1 = new Conta(10, 11, 0);
+conta1.depositar(10);
+conta1.sacar(110);
+conta1.sacar(1);
+
+console.log();
+
 const contaCorrente1 = new ContaCorrente(11, 22, 0, 100);
 contaCorrente1.depositar(10);
 contaCorrente1.sacar(110);
