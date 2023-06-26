@@ -60,7 +60,3 @@ form button {
 form button:hover {
     background-color: var(--primary-color-darker);
 }
-
-form button:active {
-    background-color: var(--primary-color-active);
-}
