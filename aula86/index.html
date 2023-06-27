@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -22,29 +22,30 @@
 
         <form action="/" method="post" class="formulario">
 
-            <label>Nome:</label>
-            <input type="text" class="nome validar">
+            <label for="input-1">Nome</label>
+            <input type="text" class="nome validar" id="input-1">
 
-            <label>Sobrenome:</label>
-            <input type="text" class="sobrenome validar">
+            <label for="input-2">Sobrenome</label>
+            <input type="text" class="sobrenome validar" id="input-2">
 
-            <label>CPF:</label>
-            <input type="text" class="cpf validar">
+            <label for="input-3">CPF</label>
+            <input type="text" class="cpf validar" id="input-3">
 
-            <label>Usuário:</label>
-            <input type="text" class="usuario validar">
+            <label for="input-4">Usuário</label>
+            <input type="text" class="usuario validar" id="input-4">
 
-            <label>Senha:</label>
-            <input type="password" class="senha validar">
+            <label for="input-5">Senha</label>
+            <input type="password" class="senha validar" id="input-5">
 
-            <label>Repetir Senha:</label>
-            <input type="password" class="repetir-senha validar">
+            <label for="input-6">Repetir Senha</label>
+            <input type="password" class="repetir-senha validar" id="input-6">
 
-            <button type="submit">Enviar</button>
+           <button type="submit">Enviar</button>
         </form>
     </section>
 
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/validacpf.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
