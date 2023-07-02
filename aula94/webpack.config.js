@@ -1,7 +1,7 @@
 const path = require('path'); // CommonJS - Sistema de módulos padrão do node 
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),
@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [{
         exclude: /node_modules/,
-        teste: /\.js$/,
+        test: /\.js$/,
         use: {
             loader: 'babel-loader',
             options: {
