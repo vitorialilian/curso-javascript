@@ -23,6 +23,24 @@
 //     }
 // }
 
-export default function subtracao(x, y) {
-    return x - y;
+// export default function subtracao(x, y) {
+//     return x - y;
+// }
+
+// const papelaria1 = 'Caderno'; 
+// const papelaria2 = 'Lápis';
+// const papelaria3 = 'Borracha';
+
+// export { papelaria1 as default, papelaria2, papelaria3 };
+
+// export default (x, y) => x + y;
+
+export const nome = 'Joãozinho';
+export const sobrenome = 'Oliveira';
+
+export default class Pessoa {
+    constructor(nome, sobrenome) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
 }

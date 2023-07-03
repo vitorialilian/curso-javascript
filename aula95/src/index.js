@@ -19,6 +19,19 @@
 
 // console.log(meuModulo);
 
-import menos from './modulo1';
+// import menos from './modulo1';
 
-console.log(menos(5, 3));
+// console.log(menos(5, 3));
+
+// import materialEscolar, { papelaria2, papelaria3 } from './modulo1';
+
+// console.log(materialEscolar, papelaria2, papelaria3);
+
+// import soma from './modulo1';
+
+// console.log(soma(85691, 36412));
+
+import Pessoa, {nome, sobrenome} from './modulo1';
+
+const p1 = new Pessoa(nome, sobrenome);
+console.log(p1);
