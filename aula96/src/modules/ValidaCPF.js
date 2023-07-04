@@ -46,9 +46,4 @@ export default class ValidaCPF {
     }
 }
 
-// const validacpf = new ValidaCPF('070.987.720-03');
-// if(validacpf.valida()) {
-//     console.log('CPF VÁLIDO');
-// } else {
-//     console.log('CPF INVÁLIDO');
-// }
+console.log('Cheguei até aqui!');
