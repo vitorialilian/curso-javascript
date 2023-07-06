@@ -5,18 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Gerador de Senhas</title>
 </head>
 
 <body>
 
     <section class="container">
-        <h1>Lorem ipsum dolor sit iste quo?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quod voluptatem similique aliquid. A
-            architecto quam optio omnis impedit. Nam laudantium obcaecati maxime totam fugit odio iste enim blanditiis
-            magni. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet doloremque ratione numquam maxime
-            itaque eligendi voluptatem quam debitis error quas doloribus, nisi laudantium optio. Porro dicta suscipit
-            dolorem doloremque distinctio.</p>
+        <h1>Gerador de Senhas</h1>
+
+        <div class="senha-gerada">Selecione as Opções</div>
+
+        <label for="numero-caracteres">Quantidade de Caracteres</label>
+        <input type="number" min="1" max="50"> <br>
+
+        <label for="">Adicionar Maiúsculas</label> 
+        <input type="checkbox" class="chk-maisculas" checked> <br>
+
+        <label for="">Adicionar Minúsculas</label> 
+        <input type="checkbox" class="chk-minúsculas"> <br>
+
+        <label for="">Adicionar Números</label> 
+        <input type="checkbox" class="chk-numeros" checked> <br>
+
+        <label for="">Adicionar Símbolos</label> 
+        <input type="checkbox" class="chk-simbolos"> <br>
+
+        <button class="gerar-senha">Gerar Senha</button>
     </section>
 
     <script src="./assets/js/bundle.js"></script>
