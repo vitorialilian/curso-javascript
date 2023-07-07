@@ -2,7 +2,7 @@
   "name": "aula94",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./public/index.js",
   "scripts": {
     "dev": "webpack -w"
   },
