@@ -11,7 +11,7 @@ console.log(__dirname);
 
 console.log(__filename);
 
-const Cachorro = require('./aula02/Z/mod02.js');
+const Cachorro = require('./Z/mod02.js');
 
 const cachorrinho = new Cachorro('Vira-lata');
 cachorrinho.latir();
