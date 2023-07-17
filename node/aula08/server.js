@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 
 app.get('/testes/:idUsuarios', (req, res) => {
     console.log(req.params);
-    res.send('oi');
+    res.send(req.params.idUsuarios);
 })
 
 app.post('/', (req, res) => {
