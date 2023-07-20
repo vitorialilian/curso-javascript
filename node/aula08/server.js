@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true})) // serve para tratar o body, sem essa parte o valor de body não seria trabalhado e mostrado da forma correta
 
 app.get('/', (req, res) => {
-    res.send('<form action="/" method="post"> Nome do cliente: <input type="text" name="nome"> <button>Enviar Formulário</button> </form>');
+    res.send('<form action="/" method="post"> Nome do cliente: <input type="text" name="nome"> <form action="/" method="post"> <br> Número de identificação: <input type="text" name="numero">  <button>Enviar Formulário</button> </form>');
 });
 
 app.get('/testes/:idUsuarios?/:parametro?', (req, res) => {
@@ -15,7 +15,7 @@ app.get('/testes/:idUsuarios?/:parametro?', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log(req.body);
-    res.send('Recebi o formulário');
+    res.send(`O que você me enviou foi: ${req.body.nome} e ${req.body.numero}`);
 });
 
 app.listen(8080, () => {
