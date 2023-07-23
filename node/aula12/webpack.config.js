@@ -2,7 +2,7 @@ const path = require('path'); // CommonJS - Sistema de módulos padrão do node
 
 module.exports = {
   mode: 'production',
-  entry: './frontend/src/main.js',
+  entry: './frontend/main.js',
   output: {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),
     filename: 'bundle.js' 
