@@ -1,10 +1,16 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
 const mongoose = require('mongoose');
-const connectionString = 'mongodb+srv://vitorialilian:Z6OwOYmbzgsr8Obg@cluster0.vccyryv.mongodb.net/?retryWrites=true&w=majority'
-mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true})
-    .then(() => console.log('Agora que a conexão ocorreu'));
+const connectionString = ''
+mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => {
+        console.log('Conectei a base de dados.');
+        app.emit('pronto');
+    })
+    .catch(e => console.log(e));
 
 const routes = require('./routes');
 const path = require('path');
@@ -21,7 +27,9 @@ app.set('view engine', 'ejs');
 app.use(middlewareGlobal); 
 app.use(routes);
 
-app.listen(8080, () => {
-    console.log('Acessar http://localhost:8080')
-    console.log('Servidor executando na porta 8080');
+app.on('pronto', () => {
+    app.listen(8080, () => {
+        console.log('Acessar http://localhost:8080')
+        console.log('Servidor executando na porta 8080');
+    });
 });
