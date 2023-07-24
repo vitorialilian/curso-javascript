@@ -4,10 +4,9 @@ const express = require('express');
 const app = express();
 
 const mongoose = require('mongoose');
-const connectionString = ''
+
 mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
-        console.log('Conectei a base de dados.');
         app.emit('pronto');
     })
     .catch(e => console.log(e));
