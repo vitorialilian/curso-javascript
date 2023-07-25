@@ -5,6 +5,12 @@ const HomeSchema = new mongoose.Schema({
     descricao: String
 });
 
-const homeModel = mongoose.model('Home', HomeSchema);
+const HomeModel = mongoose.model('Home', HomeSchema);
 
-module.exports = HomeSchema;
+class Home {
+
+}
+
+module.exports = Home;
+
+// module.exports = HomeModel;
