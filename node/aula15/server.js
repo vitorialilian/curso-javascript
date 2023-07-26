@@ -22,6 +22,20 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
+const sessionOptions = session({
+    secret: 'mqixgshdytegfbvu767836883+727722 hgf nsic nsic nsic jhfuehslawq87 i8()',
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    resave: false, 
+    saveUnitialized: false,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7, 
+        httpOnly: true
+    }
+})
+
+app.use(sessionOptions);
+app.use(flash());
+
 app.set('views', path.resolve(__dirname, 'src', 'views')) // Aqui esta passando o caminho absoluto
 app.set('view engine', 'ejs');
 
