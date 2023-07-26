@@ -10,6 +10,10 @@ mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifi
     })
     .catch(e => console.log(e));
 
+const session = require('session');
+const MongoStore = require('connect-mongo')(session);
+const flash = require('connect-flash');
+
 const routes = require('./routes');
 const path = require('path');
 const { middlewareGlobal } = require('./src/middlewares/middleware');
