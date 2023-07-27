@@ -11,14 +11,12 @@ mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifi
     .catch(e => console.log(e));
 
 const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 
 const routes = require('./routes');
 const path = require('path');
 const { middlewareGlobal } = require('./src/middlewares/middleware');
-
-let store = new MongoStore({ mongooseConnection: mongoose.connection });
 
 app.use(express.urlencoded({extended: true}));
 
@@ -26,7 +24,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
     secret: 'mqixgshdytegfbvu',
-    store: store,
+    store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
     resave: false, 
     saveUnitialized: false,
     cookie: {
