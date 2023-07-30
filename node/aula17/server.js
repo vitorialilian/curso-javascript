@@ -17,9 +17,10 @@ const flash = require('connect-flash');
 const routes = require('./routes');
 const path = require('path');
 const helmet = require('helmet')
-const { middlewareGlobal } = require('./src/middlewares/middleware');
+const csrf = require('csurf');
+const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
-app.use(helmet())
+app.use(helmet());
 
 app.use(express.urlencoded({extended: true}));
 
@@ -42,8 +43,11 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views')) // Aqui esta passando o caminho absoluto
 app.set('view engine', 'ejs');
 
+app.use(csrf())
 // Nossos próprios middlewares
 app.use(middlewareGlobal); 
+app.use(checkCsrfError);
+app.use(csrfMiddleware);
 app.use(routes);
 
 app.on('pronto', () => {
