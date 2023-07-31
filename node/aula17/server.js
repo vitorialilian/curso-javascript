@@ -28,8 +28,8 @@ const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/midd
 
 app.use(helmet());
 
-app.use(express.urlencoded({extended: true}));
-
+app.use(express.urlencoded({extended: true})); // está dizendo que podemos postar formulários dentro da nossa aplicação
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
@@ -48,7 +48,6 @@ app.use(sessionOptions);
 app.use(flash());
 
 app.set('views', path.resolve(__dirname, 'src', 'views')) // Aqui esta passando o caminho absoluto
-
 app.set('view engine', 'ejs');
 
 app.use(csrf())
