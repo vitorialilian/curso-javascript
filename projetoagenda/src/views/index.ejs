@@ -1,18 +1,19 @@
 <%- include('includes/head'); %>
+    <%- include('includes/nav'); %>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
 
-    <section class="container">
-        <h1>
-            <%= umaVariavelLocal %>
-        </h1>
+                <div class="col-lg-8">
+                    <h1 class="display-1 text-center">Erro 404!</h1>
+                    <p class="text-center lead">A página que você procura não existe.</p>
 
-        <form action="/" method="post">
-            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <label for="">Cliente</label>
-            <input type="text" name="cliente">
-            <button>Submit</button>
-        </form>
-    </section>
+                </div>
 
-    <%- include('includes/footer'); %>
-    
+                <div class="col-lg-2"></div>
+
+            </div>
+        </div>
+
+        <%- include('includes/footer'); %>
