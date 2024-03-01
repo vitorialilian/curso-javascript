@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^5.0.0",
     "core-js": "^3.31.0",
@@ -23,12 +24,14 @@
     "helmet": "^7.0.0",
     "mongoose": "^7.4.1",
     "regenerator-runtime": "^0.13.11",
-    "style-loader": "^3.3.3"
+    "style-loader": "^3.3.3",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
+    "@types/express-session": "^1.17.10",
     "babel-loader": "^9.1.2",
     "nodemon": "^3.0.1",
     "webpack": "^5.88.2",
